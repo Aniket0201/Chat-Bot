@@ -59,65 +59,65 @@ Jokes
 ## Architecture Overview
 The chatbot application consists of the following components:
 
-### Intents File:
+#### Intents File:
  A JSON file (intents.json) containing predefined tags, patterns, and responses.
 
-### NLTK Utils:
+#### NLTK Utils:
  A Python module (nltk_utils.py) for tokenizing, stemming, and generating bag-of-words representations.
 
-### Neural Network Model:
+#### Neural Network Model:
  A PyTorch-based neural network model defined in model.py for intent classification.
 
-### Training Script:
+#### Training Script:
  A training script (train.py) to preprocess data, train the neural network model, and save the trained model.
 
-### Chat Script:
+#### Chat Script:
  A chat script (chat.py) to load the trained model and interact with the user through the command line.
 
-### Flask Web App:
+#### Flask Web App:
  A web application (app.py) using Flask to provide an API for the chatbot.
 
 ## Design Decisions
-### Intent Classification:
+#### Intent Classification:
  The chatbot uses a neural network-based approach to map user inputs to predefined intents.
 
-### Data Preprocessing:
+#### Data Preprocessing:
  Tokenization and stemming are employed to preprocess user inputs. The bag-of-words model is used to represent sentences as fixed-size vectors.
 
-### Model Architecture:
+#### Model Architecture:
  A simple multi-layer neural network with one hidden layer is used for intent classification. The network uses ReLU activation functions and CrossEntropyLoss for optimization.
 
-### Confidence Threshold:
+#### Confidence Threshold:
  A confidence threshold of 75% is set to ensure the model only responds when it is reasonably confident about the intent.
 
-### Scalability:
+#### Scalability:
  The Flask web application allows for easy deployment and scalability, enabling the chatbot to be accessed via an API.
 
 ## Implementation Details
 
-### Intents File (intents.json):
+#### Intents File (intents.json):
 Contains various tags representing different intents.
 Each tag has associated patterns (example user inputs) and responses (bot replies).
 
-### NLTK Utils (nltk_utils.py):
+#### NLTK Utils (nltk_utils.py):
 Functions for tokenizing sentences, stemming words, and creating bag-of-words representations.
 
-### Neural Network Model (model.py):
+#### Neural Network Model (model.py):
 Defines a NeuralNet class extending torch.nn.Module.
 The network consists of an input layer, a hidden layer, and an output layer.
 
-### Training Script (train.py):
+#### Training Script (train.py):
 Loads and preprocesses data from intents.json.
 Tokenizes and stems words to create a vocabulary.
 Converts sentences to bag-of-words vectors.
 Trains the neural network using these vectors and saves the trained model.
 
-### Chat Script (chat.py):
+#### Chat Script (chat.py):
 Loads the trained model and intents file.
 Processes user input and predicts the intent using the model.
 Responds based on the predicted intent with a confidence threshold.
 
-### Flask Web App (app.py):
+#### Flask Web App (app.py):
 Exposes a /chat endpoint that accepts POST requests.
 Processes the incoming message and responds with the chatbot's reply.
 
