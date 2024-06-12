@@ -1,0 +1,198 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Hello",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "How are you",
+        "Is anyone there?",
+        "What's up?",
+        "Greetings",
+        "Howdy",
+        "Hey there"
+      ],
+      "responses": [
+        "Hello! Welcome to our online bookstore. How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Hey! How's it going?",
+        "Good day! How can I help you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "I'm leaving",
+        "Have a good day",
+        "Catch you later",
+        "Farewell",
+        "Talk to you later",
+        "I have to go",
+        "Take care"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!",
+        "Bye! Come back again soon.",
+        "Farewell! Stay safe."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank you very much",
+        "I appreciate it",
+        "Thanks a lot",
+        "Thanks for your help",
+        "Thanks for the assistance"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure",
+        "You're welcome!"
+      ]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?",
+        "What products are available?",
+        "Can you list your products?",
+        "What do you have in store?",
+        "What goods do you offer?"
+      ],
+      "responses": [
+        "We sell a wide range of books including fiction, non-fiction, bestsellers, and more.",
+        "Our bookstore offers a variety of genres including fiction, non-fiction, and bestsellers."
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?",
+        "Do you accept card payments?",
+        "Can I use Visa here?",
+        "What payment methods do you accept?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard, American Express, Discover, and Paypal.",
+        "We accept most major credit cards including VISA, Mastercard, American Express, and Discover, as well as Paypal."
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?",
+        "What's the delivery time?",
+        "How fast is the shipping?",
+        "How many days for delivery?",
+        "Delivery duration?"
+      ],
+      "responses": [
+        "Delivery usually takes 2-4 business days.",
+        "Shipping typically takes 2-4 business days."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?",
+        "Make me laugh",
+        "Say something funny",
+        "Can you tell a joke?"
+      ],
+      "responses": [
+        "Why did the book go to therapy? Because it had too many issues!",
+        "Why did the librarian get kicked off the plane? Because it was overbooked!"
+      ]
+    },
+    {
+      "tag": "price",
+      "patterns": [
+        "How much does it cost?",
+        "What is the price?",
+        "Price of items?",
+        "Cost of products?",
+        "How much for a book?",
+        "What do you charge?",
+        "What is the fee?"
+      ],
+      "responses": [
+        "Our prices vary depending on the book. You can check the prices on our website.",
+        "The prices of our books range depending on the genre and edition. Feel free to browse our website for more details."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What are your opening hours?",
+        "When are you open?",
+        "Working hours?",
+        "Business hours?",
+        "When do you close?",
+        "Opening times?",
+        "What are your timings?"
+      ],
+      "responses": [
+        "Our online bookstore is open 24/7 for browsing and purchases.",
+        "You can shop with us anytime, day or night, as our online bookstore is open 24/7."
+      ]
+    },
+    {
+      "tag": "suggestions_fiction",
+      "patterns": [
+        "Can you recommend a fiction book?",
+        "I'm looking for a good fiction book.",
+        "Any recommendations for fiction?",
+        "What's a popular fiction book?"
+      ],
+      "responses": [
+        "Sure! Here are some popular fiction books: 'To Kill a Mockingbird' by Harper Lee, 'The Great Gatsby' by F. Scott Fitzgerald, '1984' by George Orwell."
+      ]
+    },
+    {
+      "tag": "suggestions_nonfiction",
+      "patterns": [
+        "Can you recommend a non-fiction book?",
+        "I'm interested in non-fiction.",
+        "Any recommendations for non-fiction?",
+        "What's a popular non-fiction book?"
+      ],
+      "responses": [
+        "Of course! Here are some popular non-fiction books: 'Becoming' by Michelle Obama, 'Sapiens: A Brief History of Humankind' by Yuval Noah Harari, 'The Subtle Art of Not Giving a F*ck' by Mark Manson."
+      ]
+    },
+    {
+      "tag": "suggestions_best_sellers",
+      "patterns": [
+        "What are your best-selling books?",
+        "Can you suggest a best-selling book?",
+        "Any recommendations for best-sellers?",
+        "What's trending right now?"
+      ],
+      "responses": [
+        "Absolutely! Here are some of our best-selling books: 'The Silent Patient' by Alex Michaelides, 'Where the Crawdads Sing' by Delia Owens, 'Educated' by Tara Westover."
+      ]
+    }
+  ]
+}

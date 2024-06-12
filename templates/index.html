@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Added to make items stack vertically */
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 12px;
+            text-align: center;
+            color: #888;
+            margin-bottom: 20px; /* Added for spacing */
+        }
+        #chatbox {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #chatlog {
+            min-height: 200px;
+            max-height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        #userInput {
+            width: calc(100% - 80px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        #sendButton {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #sendButton:hover {
+            background-color: #0056b3;
+        }
+        .bot-message {
+            font-weight: bold;
+            color: #007bff;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>CHAT-BOT</h1>
+    <p class="subtitle">for online bookstore</p>
+    <div id="chatbox">
+        <div id="chatlog"></div>
+        <input id="userInput" type="text" placeholder="Type a message...">
+        <button id="sendButton" onclick="sendMessage()">Send</button>
+    </div>
+    <script>
+        async function sendMessage() {
+            var userInput = document.getElementById('userInput').value;
+            var chatlog = document.getElementById('chatlog');
+            chatlog.innerHTML += "<strong>You:</strong> " + userInput + "<br>";
+
+            try {
+                let response = await fetch("/get", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ msg: userInput })
+                });
+
+                if (response.ok) {
+                    let data = await response.json();
+                    chatlog.innerHTML += "<strong>Bot:</strong> " + data.response + "<br>";
+                } else {
+                    chatlog.innerHTML += "<strong>Bot:</strong> Error: " + response.statusText + "<br>";
+                }
+            } catch (error) {
+                chatlog.innerHTML += "<strong>Bot:</strong> Error: " + error.message + "<br>";
+            }
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
+
