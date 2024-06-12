@@ -2,33 +2,9 @@
 
 This repository contains the code to develop a chatbot for an online bookstore that assists users with various tasks such as providing product information, processing payment queries, delivering details, suggesting books, and even telling jokes.
 
-## Installation
-
-### PyTorch and Dependencies
-
-To install PyTorch, please refer to the [official PyTorch installation guide](https://pytorch.org/get-started/locally/).
-
-You also need to install `nltk`:
-
-```bash
-pip install nltk
-```
-## Usage
-Training the Model
-Run the training script:
-
-```bash
-python train.py
-```
-
-This will generate a data.pth file.
-
 ## Interacting with the Chatbot
-Run the chat script:
+ Here is the Link to interact with the [CHAT-BOT](https://chat-bot-47on.onrender.com/).
 
-```bash
-python chat.py
-```
 
 ## Features
 The chatbot can handle the following types of queries:
