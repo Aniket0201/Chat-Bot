@@ -50,28 +50,39 @@ Jokes
 ## Architecture Overview
 The chatbot application consists of the following components:
 
-### Intents File: A JSON file (intents.json) containing predefined tags, patterns, and responses.
+### Intents File:
+ A JSON file (intents.json) containing predefined tags, patterns, and responses.
 
-### NLTK Utils: A Python module (nltk_utils.py) for tokenizing, stemming, and generating bag-of-words representations.
+### NLTK Utils:
+ A Python module (nltk_utils.py) for tokenizing, stemming, and generating bag-of-words representations.
 
-### Neural Network Model: A PyTorch-based neural network model defined in model.py for intent classification.
+### Neural Network Model:
+ A PyTorch-based neural network model defined in model.py for intent classification.
 
-### Training Script: A training script (train.py) to preprocess data, train the neural network model, and save the trained model.
+### Training Script:
+ A training script (train.py) to preprocess data, train the neural network model, and save the trained model.
 
-### Chat Script: A chat script (chat.py) to load the trained model and interact with the user through the command line.
+### Chat Script:
+ A chat script (chat.py) to load the trained model and interact with the user through the command line.
 
-### Flask Web App: A web application (app.py) using Flask to provide an API for the chatbot.
+### Flask Web App:
+ A web application (app.py) using Flask to provide an API for the chatbot.
 
 ## Design Decisions
-### Intent Classification: The chatbot uses a neural network-based approach to map user inputs to predefined intents.
+### Intent Classification:
+ The chatbot uses a neural network-based approach to map user inputs to predefined intents.
 
-### Data Preprocessing: Tokenization and stemming are employed to preprocess user inputs. The bag-of-words model is used to represent sentences as fixed-size vectors.
+### Data Preprocessing:
+ Tokenization and stemming are employed to preprocess user inputs. The bag-of-words model is used to represent sentences as fixed-size vectors.
 
-### Model Architecture: A simple multi-layer neural network with one hidden layer is used for intent classification. The network uses ReLU activation functions and CrossEntropyLoss for optimization.
+### Model Architecture:
+ A simple multi-layer neural network with one hidden layer is used for intent classification. The network uses ReLU activation functions and CrossEntropyLoss for optimization.
 
-### Confidence Threshold: A confidence threshold of 75% is set to ensure the model only responds when it is reasonably confident about the intent.
+### Confidence Threshold:
+ A confidence threshold of 75% is set to ensure the model only responds when it is reasonably confident about the intent.
 
-### Scalability: The Flask web application allows for easy deployment and scalability, enabling the chatbot to be accessed via an API.
+### Scalability:
+ The Flask web application allows for easy deployment and scalability, enabling the chatbot to be accessed via an API.
 
 ## Implementation Details
 
