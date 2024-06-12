@@ -17,6 +17,7 @@ Chat Script: A chat script (chat.py) to load the trained model and interact with
 Flask Web App: A web application (app.py) using Flask to provide an API for the chatbot.
 
 2. Design Decisions
+
 Intent Classification: The chatbot uses a neural network-based intent classification approach, mapping user inputs to predefined intents.
 Data Preprocessing: Tokenization and stemming are employed to preprocess user inputs. The bag-of-words model is used to represent sentences as fixed-size vectors.
 Model Architecture: A simple multi-layer neural network with one hidden layer is used for intent classification. The network uses ReLU activation functions and CrossEntropyLoss for optimization.
@@ -50,5 +51,6 @@ Flask Web App (app.py):
 
 Exposes a /chat endpoint that accepts POST requests.
 Processes the incoming message and responds with the chatbot's reply.
+
 Conclusion
 This chatbot application utilizes a neural network for intent classification, trained using tokenized and stemmed input data converted into a bag-of-words representation. The chatbot is accessible via a Flask web application, making it easy to deploy and use as an API. Expanding the training data and refining the model can further enhance the chatbot's ability to handle a broader range of user queries effectively.
