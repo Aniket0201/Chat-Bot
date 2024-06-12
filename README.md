@@ -34,17 +34,26 @@ python chat.py
 The chatbot can handle the following types of queries:
 
 Greetings
+
 Product information
+
 Payment queries
+
 Delivery details
+
 Book recommendations
+
 Jokes
 
 ### Example Questions
 "What kinds of items are there?"
+
 "Do you accept Mastercard?"
+
 "How long does delivery take?"
+
 "Can you recommend a fiction book?"
+
 "Tell me a joke!"
 
 ## Architecture Overview
