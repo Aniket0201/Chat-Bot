@@ -1,9 +1,13 @@
 import random
 import json
 import torch
+import nltk
 from flask import Flask, request, jsonify, render_template
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+
+# Ensure NLTK data is downloaded
+nltk.download('punkt')
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
