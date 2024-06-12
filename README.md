@@ -12,6 +12,7 @@ You also need to install `nltk`:
 
 ```bash
 pip install nltk
+```
 
 If you encounter an error during the first run, you may need to install the nltk.tokenize.punkt package. Run the following commands in your terminal:
 
