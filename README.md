@@ -1,12 +1,53 @@
-Developed a chatbot for an online bookstore that helps users with a variety of tasks. The chatbot can handle greetings, provide information about products, process payment queries, give delivery details, suggest books, and even tell jokes. You can interact with the chatbot by asking questions like:
+Chatbot for Online Bookstore
+This repository contains the code to develop a chatbot for an online bookstore that assists users with various tasks such as providing product information, processing payment queries, delivering details, suggesting books, and even telling jokes.
 
+Installation
+PyTorch and Dependencies
+To install PyTorch, please refer to the official PyTorch installation guide.
+
+You also need to install nltk:
+
+bash
+Copy code
+pip install nltk
+If you encounter an error during the first run, you may need to install the nltk.tokenize.punkt package. Run the following commands in your terminal:
+
+bash
+Copy code
+$ python
+>>> import nltk
+>>> nltk.download('punkt')
+Usage
+Training the Model
+Run the training script:
+
+bash
+Copy code
+python train.py
+This will generate a data.pth file.
+
+Interacting with the Chatbot
+Run the chat script:
+
+bash
+Copy code
+python chat.py
+Features
+The chatbot can handle the following types of queries:
+
+Greetings
+Product information
+Payment queries
+Delivery details
+Book recommendations
+Jokes
+Example Questions
 "What kinds of items are there?"
 "Do you accept Mastercard?"
 "How long does delivery take?"
 "Can you recommend a fiction book?"
 "Tell me a joke!"
-
-1. Architecture Overview
+Architecture Overview
 The chatbot application consists of the following components:
 
 Intents File: A JSON file (intents.json) containing predefined tags, patterns, and responses.
@@ -15,16 +56,13 @@ Neural Network Model: A PyTorch-based neural network model defined in model.py f
 Training Script: A training script (train.py) to preprocess data, train the neural network model, and save the trained model.
 Chat Script: A chat script (chat.py) to load the trained model and interact with the user through the command line.
 Flask Web App: A web application (app.py) using Flask to provide an API for the chatbot.
-
-2. Design Decisions
-
-Intent Classification: The chatbot uses a neural network-based intent classification approach, mapping user inputs to predefined intents.
+Design Decisions
+Intent Classification: The chatbot uses a neural network-based approach to map user inputs to predefined intents.
 Data Preprocessing: Tokenization and stemming are employed to preprocess user inputs. The bag-of-words model is used to represent sentences as fixed-size vectors.
 Model Architecture: A simple multi-layer neural network with one hidden layer is used for intent classification. The network uses ReLU activation functions and CrossEntropyLoss for optimization.
 Confidence Threshold: A confidence threshold of 75% is set to ensure the model only responds when it is reasonably confident about the intent.
 Scalability: The Flask web application allows for easy deployment and scalability, enabling the chatbot to be accessed via an API.
-
-3. Implementation Details
+Implementation Details
 Intents File (intents.json):
 
 Contains various tags representing different intents.
@@ -51,6 +89,11 @@ Flask Web App (app.py):
 
 Exposes a /chat endpoint that accepts POST requests.
 Processes the incoming message and responds with the chatbot's reply.
-
 Conclusion
-This chatbot application utilizes a neural network for intent classification, trained using tokenized and stemmed input data converted into a bag-of-words representation. The chatbot is accessible via a Flask web application, making it easy to deploy and use as an API. Expanding the training data and refining the model can further enhance the chatbot's ability to handle a broader range of user queries effectively.
+This chatbot application uses a neural network for intent classification, trained with tokenized and stemmed input data converted into a bag-of-words representation. The chatbot is accessible via a Flask web application, making it easy to deploy and use as an API. Expanding the training data and refining the model can further enhance the chatbot's ability to handle a broader range of user queries effectively.
+
+
+
+
+
+
