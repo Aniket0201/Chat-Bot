@@ -1,15 +1,18 @@
-Chatbot for Online Bookstore
+# Chatbot for Online Bookstore
+
 This repository contains the code to develop a chatbot for an online bookstore that assists users with various tasks such as providing product information, processing payment queries, delivering details, suggesting books, and even telling jokes.
 
-Installation
-PyTorch and Dependencies
-To install PyTorch, please refer to the official PyTorch installation guide.
+## Installation
 
-You also need to install nltk:
+### PyTorch and Dependencies
 
-bash
-Copy code
+To install PyTorch, please refer to the [official PyTorch installation guide](https://pytorch.org/get-started/locally/).
+
+You also need to install `nltk`:
+
+```bash
 pip install nltk
+
 If you encounter an error during the first run, you may need to install the nltk.tokenize.punkt package. Run the following commands in your terminal:
 
 bash
